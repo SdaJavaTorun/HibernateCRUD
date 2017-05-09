@@ -1,9 +1,9 @@
-package com.sdajava.hibernate.test;
+package com.sdajava.hibernate;
 
 import com.sdajava.hibernate.implement.UserDAOImpl;
 import com.sdajava.hibernate.model.User;
 
-public class HibernateTest {
+public class Main {
 
 	public static void main(String[] args) {
 
@@ -11,11 +11,15 @@ public class HibernateTest {
 		User user =new User();
 		user.setName("jan");
 		user.setSurname("kowalski");
+
+        User user1 =new User();
+        user1.setName("andrzej");
+        user1.setSurname("kowalski");
+
+
 		userDAOImpl.insertUser(user);
-		userDAOImpl.updateUser(1, "andrzej","test");
-		userDAOImpl.getAllUsers();
-		userDAOImpl.removeUser(1);
-		user=null;
-		userDAOImpl.findUser(1);
+        userDAOImpl.insertUser(user1);
+ 		userDAOImpl.getAllUsers();
+
 	}
 }

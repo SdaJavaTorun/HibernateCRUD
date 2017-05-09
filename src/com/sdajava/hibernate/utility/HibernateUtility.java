@@ -8,7 +8,7 @@ public class HibernateUtility {
 
 	private final static SessionFactory sf = new Configuration()
 	        .configure("com/sdajava/hibernate/hibernate.cfg.xml").buildSessionFactory();
-    	private volatile static Session session = sf.openSession();
+    private static Session session = sf.openSession();
 
 	private HibernateUtility() {
 	}
